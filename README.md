@@ -94,4 +94,11 @@ TOPICS:
         L1, L2 unchanged
         L1.extend([0,6]) -> mutated L1 to [2,1,3,0,6] 
   
-
+   REMOVE:
+      L = [2,1,3,6,3,7,0]
+        L.remove(2)会改变/mutate. 且2:是具体被移除的value
+        L.remove(3)是移除第一个3
+        del(L[1])移除第二位，也会mutate
+        L.pop() 移除最右，所以是去0
+      
+   
