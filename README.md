@@ -28,10 +28,10 @@ TOPICS:
     words = ()
     for t in aTuple:
         # concatenating with a singleton tuple
-        nums = nums + (t[0],)
+      nums = nums + (t[0],)
         # only add words haven't added before
-        if t[1] not in words:
-            words = words + (t[1],)
+      if t[1] not in words:
+        words = words + (t[1],)
     min_n = min(nums)
     max_n = max(nums)
     unique_words = len(words)
