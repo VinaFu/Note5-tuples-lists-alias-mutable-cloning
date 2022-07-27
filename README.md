@@ -21,7 +21,7 @@ TOPICS:
   
    SWAP: (x,y)=(y,x)
    
-   MANIPULATING TUPLES:
+   # MANIPULATING TUPLES（这个代码好看好多遍哦！！）:
    
         def get_data(aTuple):
             nums = ()    # empty tuple
@@ -31,7 +31,7 @@ TOPICS:
                 nums = nums + (t[0],)
                 # only add words haven't added before
                 if t[1] not in words:
-                    words = words + (t[1],)  #每个tuple里面都是0，1开始的，这里的1指得是第二位字母位
+                    words = words + (t[1],)  #每个tuple里面都是0，1开始的，这里的1指得是第二位字母位。因为第一次只有t(0)所以没有它
             min_n = min(nums)
             max_n = max(nums)
             unique_words = len(words)
