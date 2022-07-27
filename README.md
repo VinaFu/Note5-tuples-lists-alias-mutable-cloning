@@ -9,7 +9,9 @@ TOPICS:
   idea of mutability
   idea of cloning
 
-1. TUPLES (元组)
+1. TUPLES (元组) 
+
+   和list很像，但是内部可以包含很多元素，比如内部再包含一个坐标，然后分别跑
 
     1.1 an ordered sequence of elements, can mix element types
   
@@ -42,6 +44,7 @@ TOPICS:
         print("a:",a,"b:",b,"c:",c)
 
          #a: 1 b: 7 c: 2# 和之前return的内容一致：最大、最小、一共出现了几个字母（2）
+         可以用pythontutor看过程
 
         建立上述function之后，可以运用到其它方面去，比如，看Taylor在一定年限里给多少人写过歌，重名可缩减：
         
@@ -65,4 +68,25 @@ TOPICS:
               (min_year, max_year, num_people) = get_data(tswift)
               print("From", min_year, "to", max_year,  "Taylor Swift wrote songs about", num_people, "people!")
 
+2. LISTS
+  2.1 ordered sequence of information, accessible by index
+  2.2 a list is denoted by square brackets, []
+  2.3 a list contains elements
+    • usually homogeneous (ie, all integers)
+    • can contain mixed types (not common)
+  2.4 list elements can be changed so a list is MUTABLE，可通过index直接改value
+  
+  ADD: 
+  L = [2,1,3]
+  L.append(5) -> L is now [2,1,3,5]
+  mutates the list
+  
+  Using concatenation, + operator, to give you a new list
+  mutate list with L.extend(some_list)
+      L1 = [2,1,3]
+      L2 = [4,5,6]
+      L3 = L1 + L2  -> L3 is [2,1,3,4,5,6]
+      L1, L2 unchanged
+      L1.extend([0,6]) -> mutated L1 to [2,1,3,0,6] 
+  
 
