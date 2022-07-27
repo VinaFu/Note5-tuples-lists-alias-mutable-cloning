@@ -103,4 +103,19 @@ TOPICS:
           del(L[1])移除第二位，也会mutate          
           L.pop() 移除最右，所以是去0
       
+      
+   CONVERT LISTS TO STRINGS AND BACK:
+   
+      P15 PPT
+   
+   sorted sort? and P21?? 改不改？
+   
+   cone
+   chill = cool [:] (0:len(cool))即引用所有
+   
+   nested - 嵌套 - 类似于复合函数
+   
+   
+   
+   
    
