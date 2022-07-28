@@ -105,8 +105,18 @@ TOPICS:
       
       
    CONVERT LISTS TO STRINGS AND BACK:
-   
-      P15 PPT
+     
+      convert string to list with list(s)
+      can use s.split(), to split a string on a character paramete
+ use ''.join(L) to turn a list of characters into a string, can
+give a character in quotes to add char between every element
+6.0001 LECTURE 5 14
+s = "I<3 cs"  s is a string
+list(s)  returns ['I','<','3',' ','c','s']
+s.split('<')  returns ['I', '3 cs']
+L = ['a','b','c']  L is a list
+''.join(L)  returns "abc"
+'_'.join(L)  returns "a_b_c"
    
    sorted sort? and P21?? 改不改？
    
