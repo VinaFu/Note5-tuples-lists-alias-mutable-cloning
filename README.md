@@ -33,7 +33,8 @@ TOPICS:
                 nums = nums + (t[0],)
                 # only add words haven't added before
                 if t[1] not in words:
-                    words = words + (t[1],)  #每个tuple里面都是0，1开始的，这里的1指得是第二位字母位。因为第一次只有t(0)所以没有它
+                    words = words + (t[1],)  #每个tuple里面都是0，1开始的，
+                    这里的1指得是第二位字母位。因为第一次只有t(0)所以没有它
             min_n = min(nums)
             max_n = max(nums)
             unique_words = len(words)
@@ -66,7 +67,8 @@ TOPICS:
                         (2010,"Taylor"),
                         (2008,"Joe"))
               (min_year, max_year, num_people) = get_data(tswift)
-              print("From", min_year, "to", max_year,  "Taylor Swift wrote songs about", num_people, "people!")
+              print("From", min_year, "to", max_year,  
+              "Taylor Swift wrote songs about", num_people, "people!")
 
 2. LISTS
 
