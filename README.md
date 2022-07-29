@@ -2,12 +2,12 @@
 
 TOPICS:
 
-  introduce new compound data types
-    • tuples
-    • lists
-  idea of aliasing
-  idea of mutability
-  idea of cloning
+    introduce new compound data types
+      • tuples
+      • lists
+    idea of aliasing
+    idea of mutability
+    idea of cloning
 
 1. TUPLES (元组) 
 
@@ -26,15 +26,16 @@ TOPICS:
    # MANIPULATING TUPLES（这个代码好看好多遍哦！！）:
    
         def get_data(aTuple):
-            nums = ()    # empty tuple
+            nums = ()    # empty tuple 
             words = ()
             for t in aTuple:
-                # concatenating with a singleton tuple
-                nums = nums + (t[0],)
+                # concatenating with a singleton tuple - 关注其中一个小集
+                nums = nums + (t[0],) #每次往空集里加一个数
                 # only add words haven't added before
                 if t[1] not in words:
-                    words = words + (t[1],)  #每个tuple里面都是0，1开始的，
-                    这里的1指得是第二位字母位。因为第一次只有t(0)所以没有它
+                    words = words + (t[1],)  #每次加一个字母，且去重
+                    #每个tuple里面都是0，1开始的，t[0]-nums;t[1]-words
+                    这里的1指得是第二位字母位。
             min_n = min(nums)
             max_n = max(nums)
             unique_words = len(words)
@@ -108,25 +109,58 @@ TOPICS:
       
    CONVERT LISTS TO STRINGS AND BACK:
      
-      convert string to list with list(s)
-      can use s.split(), to split a string on a character paramete
- use ''.join(L) to turn a list of characters into a string, can
-give a character in quotes to add char between every element
-6.0001 LECTURE 5 14
-s = "I<3 cs"  s is a string
-list(s)  returns ['I','<','3',' ','c','s']
-s.split('<')  returns ['I', '3 cs']
-L = ['a','b','c']  L is a list
-''.join(L)  returns "abc"
-'_'.join(L)  returns "a_b_c"
+      1) convert string to list with list(s)
+      2) use s.split(), to split a string on a character paramete
+
+      Use ''.join(L) to turn a list of characters into a string, can
+      give a character in quotes to add char between every element
+      
+      stri - list:
+      s = "I<3 cs" #s is a string
+      list(s) #returns ['I','<','3',' ','c','s']
+      s.split('<') #returns ['I', '3 cs']
+      
+      list - str:
+      L = ['a','b','c'] # L is a list
+      ''.join(L) #returns "abc"
+      '_'.join(L) #returns "a_b_c"
    
-   sorted sort? and P21?? 改不改？
+   Sorted, Sort and Reverse:(后面还会有)
    
-   cone
-   chill = cool [:] (0:len(cool))即引用所有
+       L=[9,6,0,3]
+       sorted(L) -> returns sorted list, does not mutate L
+       L.sort() -> mutates L=[0,3,6,9]
+       L.reverse() -> mutates L=[9,6,3,0]
+   
+   ALIASES
+   
+        hot is an alias for warm – changing one changes the other!
+        append() has a side effect：
+        
+        warm = ['red', 'yellow', 'orange']
+        hot = warm
+        hot.append('pink')
+        print(hot)
+        print(warm)
+        
+        两个都会增加pink
+        
+   
+   
+   CLONING A LIST
+   
+        create a new list and copy every element using
+        chill = cool[:]-代表这个整个list
+        
+        cool = ['blue', 'green', 'grey']
+        chill = cool[:]
+        chill.append('black')
+        print(chill)
+        print(cool)
+
    
    nested - 嵌套 - 类似于复合函数
-   
+   # 有个家庭作业！
    
    
    
